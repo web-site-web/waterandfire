@@ -429,14 +429,14 @@
       img.onerror = () => {
         attempt++;
         if (attempt < tries.length) {
-          img.src = `images/${folder}/${name}.${tries[attempt]}`;
+          img.src = `${folder}/${name}.${tries[attempt]}`;
         } else {
           img.remove();
           card.remove();
         }
       };
 
-      img.src = `images/${folder}/${name}.${tries[0]}`;
+      img.src = `${folder}/${name}.${tries[0]}`;
       return img;
     }
 
